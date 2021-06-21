@@ -19,7 +19,7 @@ Requires a linux OS such as the one that WSL2 uses. For installation on windows 
 
 Requires docker to be installed on the host machine. For windows, ensure docker host integration is enabled for the WSL2 instance see https://docs.docker.com/docker-for-windows/wsl/.
 
-For the zencontrol controllers to connect to your PC, you will need to ensure port 1883 is open on your PC firewall. For windows firewall rules see https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-firewall/create-an-inbound-port-rule.
+For the zencontrol controllers to connect to your PC, you will need to ensure port 8883 is open on your PC firewall. For windows firewall rules see https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-firewall/create-an-inbound-port-rule.
 
 Usage
 -----
