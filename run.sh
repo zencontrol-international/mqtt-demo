@@ -14,4 +14,4 @@ fi
 
 # Launches everything in the docker file, then logs it in a way that lets you Ctrl-C out of the logs
 # without taking the containers back down.
-docker-compose pull --ignore-pull-failures && docker-compose up -d && exec docker-compose logs -tf
+docker-compose pull --ignore-pull-failures && docker-compose up -d
