@@ -1,0 +1,39 @@
+version: '3'
+services:
+    mosquitto:
+        image: eclipse-mosquitto
+        ports:
+        - 1883:1883
+        - 9001:9001
+        volumes:
+        - ./mosquitto:/mosquitto/config
+        - ./certs:/mosquitto/certs
+    nodered:
+        image: nodered/node-red
+        ports:
+        - 1880:1880
+        volumes:
+        - ./node-red:/data
+        - ./certs:/certs
+    prometheus:
+        image: prom/prometheus:v2.18.1
+        ports:
+        - 9090:9090
+        volumes:
+        - ./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
+    grafana:
+        image: grafana/grafana:8.0.2
+        container_name: grafana
+        volumes:
+            - grafana-storage:/var/lib/grafana
+            - ./grafana/provisioning:/etc/grafana/provisioning
+            - ./grafana/dashboards:/var/lib/grafana/dashboards
+        environment:
+            - GF_SECURITY_ADMIN_USER=admin
+            - GF_SECURITY_ADMIN_PASSWORD=wZ7WMaHmGdDN9M
+            - GF_USERS_ALLOW_SIGN_UP=false
+        restart: unless-stopped
+        ports:
+            - 3000:3000
+volumes:
+    grafana-storage:
