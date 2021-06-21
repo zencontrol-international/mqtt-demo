@@ -8,7 +8,7 @@ About
 Starts up an MQTT broker and sets it up in a state that you can connect a zencontrol controller too. Once connected, you will be able to view metrics on grafana or edit Node-RED flows.
 
 Once all the services are running you can visit the following in your local PCs browser:
-* Grafana -> http://host.docker.internal:3000/
+* Grafana (user: admin, pass: wZ7WMaHmGdDN9M)-> http://host.docker.internal:3000/
 * Node-RED -> http://host.docker.internal:1880/
 * Prometheus -> http://host.docker.internal:9090/
 
@@ -28,7 +28,7 @@ To start all the services
 ```
 ./run.sh
 ```
-After the run.sh script has finished, install the CA cert found at certs/ca.pem onto the controller. For information on setting up your zencontrol controller see https://zencontrol.zendesk.com/knowledge/articles/360004742836.
+After the run.sh script has finished, install the CA cert found at certs/ca.pem onto the controller. For information on setting up your zencontrol controller see https://support.zencontrol.com/hc/en-us/articles/360004742836.
 
 To reset everything back (resets Node-RED flows/Grafana dashboards etc)
 ```
