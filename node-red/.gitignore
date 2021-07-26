@@ -1,4 +1,7 @@
 node_modules
 .npm
-.config*
+.config.nodes.json
+.config.nodes.json.backup
+.config.users.json
+.config.users.json.backup
 .flows*
